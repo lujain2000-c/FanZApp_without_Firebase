@@ -161,7 +161,7 @@ struct FirstScreenView: View {
                                     HStack(spacing: 42){
                                         Button(action:{
                                             showingSheet = true
-                                           // vm.fetchPlayer(playerNum: "11")
+                                            vm.player = vm.players[1]
                                         } , label: {
                                             CardView(y: -40, x: 0, name: "Mohamed Sala", number: "11")
                                         })
@@ -174,7 +174,7 @@ struct FirstScreenView: View {
                                             
                                         Button(action:{
                                             showingSheet = true
-                                       //     vm.fetchPlayer(playerNum: "7")
+                                            vm.player = vm.players[0]
                                         } , label: {
                                             CardView(y: -24, x: 0,name: "Cristiano Ronaldo", number: "7")
                                         })

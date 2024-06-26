@@ -55,9 +55,11 @@ struct PlayerDetailsView: View {
                                                 .aspectRatio(contentMode: .fill)
                                                 .frame(maxWidth: .infinity,maxHeight: .infinity)
                                             
-                                            AsyncImage(url: URL(string: "\(vm.player.image)"))
+                                           // AsyncImage(url: URL(string: "\(vm.player.image)"))
+                                            Image(systemName: "person")
+                                                .resizable()
                                                 .aspectRatio(contentMode: .fit)
-                                                .frame(width: 80, height: 100, alignment: .top)
+                                            .frame(width: 100, height: 80, alignment: .top)
                                                 .mask( Capsule())
                                             //.padding(.top,42)
                                             HStack(alignment:.top){
@@ -153,8 +155,10 @@ struct PlayerDetailsView: View {
                             .shadow(radius: 10)
                             .overlay(
                                 HStack(spacing: 24){
-                                    AsyncImage(url: URL(string: "\(vm.player.image)"))
+                                    //AsyncImage(url: URL(string: "\(vm.player.image)"))
+                                    Image(systemName: "person")
                                         .font(.body.weight(.bold))
+                                    .aspectRatio(contentMode: .fit)
                                         .frame(width: 36, height: 36)
                                         .foregroundColor(.secondary)
                                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
